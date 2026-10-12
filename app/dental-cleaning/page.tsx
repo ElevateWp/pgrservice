@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza de calhas e rufos',
+  title: 'Gutter Cleaning',
   description:
-    'Limpeza de calhas e rufos para ajudar a manter o escoamento da água da chuva.',
+    'Professional gutter cleaning to help keep rainwater flowing away from your property.',
   pathname: '/dental-cleaning/',
 });
 
@@ -44,19 +44,19 @@ export default function DentalCleaningPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  roofing Prevention & Airflow
+                  Gutter Cleaning & Drainage
                 </span>
-                <WordRevealH1 text="Limpeza de calhas e revisão dos pontos de escoamento." />
+                <WordRevealH1 text="Clear gutters help rainwater drain safely away." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Solicitar limpeza de calhas e rufos
+                    Request a Gutter Cleaning Quote
                   </Button>
                   <Button href="#procedure" variant="ghost" size="lg">
-                    View hygiene sequence
+                    See the Service Steps
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -66,16 +66,16 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Método de avaliação</span>
-                    <span className="font-medium text-forest">Glycine Airflow / Piezo</span>
+                    <span>Service</span>
+                    <span className="font-medium text-forest">Gutter cleaning</span>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Sensitivity</span>
-                    <span className="font-medium text-forest">Warm Water Stream</span>
+                    <span>Drainage</span>
+                    <span className="font-medium text-forest">Outlets checked</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Standard Interval</span>
-                    <span className="font-medium text-forest">Inspeção periódica</span>
+                    <span>Availability</span>
+                    <span className="font-medium text-forest">By appointment</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -84,7 +84,7 @@ export default function DentalCleaningPage() {
         </div>
       </section>
 
-      {/* SECTION 2: What Is Professional Dental Cleaning? */}
+      {/* SECTION 2: Professional Gutter Cleaning */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -94,14 +94,14 @@ export default function DentalCleaningPage() {
                   Preventive Science
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Como funciona a limpeza de calhas?
+                  How Does Gutter Cleaning Work?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike traditional metal hand scrapers, glycine powder airflow reaches subgingival pockets safely without scratching roof tiles prisms or sensitive root cementum.
+                    The team removes accessible leaves and debris, checks outlets and drainage, and reports visible signs of damage that may need repair.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -110,8 +110,8 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1661930941624-f4b43e3079f1?auto=format&fit=crop&w=1600&q=85"
-                    alt="Guided airflow Calhas e Rufos repair"
+                    src="/images/pgr-project-01.jpg"
+                    alt="Gutter and downpipe project"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -123,16 +123,16 @@ export default function DentalCleaningPage() {
         </div>
       </section>
 
-      {/* SECTION 3: Why Dental Cleaning Is Important */}
+      {/* SECTION 3: Why Gutter Cleaning Is Important */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Systemic Health Protection
+                Protect Your Property
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Por que manter as calhas limpas?
+                Why Keep Gutters Clear?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -144,7 +144,7 @@ export default function DentalCleaningPage() {
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
                     {benefit}
                   </p>
-                  <span className="font-body text-13 text-forest font-medium">Preventive standard</span>
+                  <span className="font-body text-13 text-forest font-medium">Property care</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -156,24 +156,24 @@ export default function DentalCleaningPage() {
       <div id="procedure">
         <ProcedurePin
           steps={service.procedureSteps}
-          title="Guided Hygiene & Debridement Sequence"
-          subtitle="Gentle 4-Stage roofing Protocol"
+          title="Gutter Cleaning Steps"
+          subtitle="A clear, careful service process"
         />
       </div>
 
-      {/* SECTION 5: Plaque, Tartar & Gum Health */}
+      {/* SECTION 5: Common Drainage Problems */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                roofing Pathology
+                Drainage Problems
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Understanding biofilm, calculus & bone loss
+                Common Causes of Blocked Gutters
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Folhas e resíduos podem bloquear o escoamento da água. A limpeza ajuda a reduzir transbordamentos e a identificar sinais visíveis de vazamento.
+                Leaves, moss and other debris can restrict water flow. Clearing the gutter helps reduce overflow and makes visible issues easier to identify.
               </p>
             </div>
           </AnimateOnScroll>
@@ -181,25 +181,25 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 1: Plaque Biofilm</span>
+                <span className="font-display text-21 text-forest block mb-2">Leaves and Twigs</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Folhas e pequenos resíduos podem se acumular nas calhas e dificultar a drenagem da água da chuva.
+                  Leaves and small debris can collect in gutters and slow the flow of rainwater.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 2: Calcified Tartar</span>
+                <span className="font-display text-21 text-forest block mb-2">Compacted Debris</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Resíduos compactados podem exigir limpeza cuidadosa. O método é definido conforme o acesso e as condições do local.
+                  Wet leaves and dirt can build up over time. The cleaning method depends on safe access and the condition of the property.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 3: Pocket Formation</span>
+                <span className="font-display text-21 text-forest block mb-2">Blocked Outlets</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Deepening sulcus (4mm+) allowing anaerobic bacteria to enter bone architecture. Requires therapeutic deep debridement.
+                  A blocked outlet can prevent water from draining through the downpipe and may cause water to spill over the gutter edge.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -213,10 +213,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Recall Frequency
+                Maintenance Frequency
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Recommended hygiene intervals
+                When to Arrange Gutter Cleaning
               </h2>
             </div>
           </AnimateOnScroll>
@@ -224,19 +224,19 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimateOnScroll animation="fade-right" duration={0.8}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Inspeção periódica</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">Revisão preventiva</h3>
+                <span className="font-display text-26 text-forest block mb-2">Periodic Checks</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">Routine Maintenance</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Para coberturas sem sinais aparentes de dano; a frequência adequada depende do material e das condições do imóvel.
+                  The right cleaning schedule depends on nearby trees, weather exposure and the layout of your property.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Após chuva forte ou ventos intensos</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">roofing Maintenance</h3>
+                <span className="font-display text-26 text-forest block mb-2">After Stormy Weather</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">Check for Overflow</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Para telhados com histórico de infiltrações ou desgaste, uma avaliação pode ajudar a identificar pontos que merecem atenção.
+                  If water has overflowed or you notice a leak, arrange an inspection to identify the cause and discuss suitable next steps.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -250,10 +250,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Cuidados após a limpeza
+                After-Service Care
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Cuidados de manutenção da cobertura
+                Keeping Your Roof Drainage in Good Condition
               </h2>
             </div>
           </AnimateOnScroll>
@@ -261,25 +261,25 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Remoção de detritos</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Keep Gutters Clear</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Mantenha calhas e saídas de água desobstruídas; solicite limpeza quando houver acúmulo de folhas ou resíduos.
+                  Arrange cleaning when leaves or other debris begin to collect in gutters or at outlet points.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Inspeção de rufos e calhas</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Look for Visible Issues</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Verifique sinais de obstrução e vazamento a partir do chão. Não suba na cobertura sem acesso e equipamento adequados.
+                  From the ground, look for overflow, loose fittings or visible leaks. Do not climb onto the roof without suitable equipment and training.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Revisão das telhas</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Arrange Repairs Promptly</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Peças quebradas ou deslocadas devem ser avaliadas por uma equipe com acesso seguro ao telhado.
+                  Broken or displaced roof components should be assessed by a professional with safe roof access.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -294,13 +294,13 @@ export default function DentalCleaningPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Transparent Fees
+                  Transparent Quotes
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  de telhados hygiene pricing
+                  Gutter Cleaning Quotes
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard Hygiene Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Quotation Details</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -315,7 +315,7 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Informações para preparar o orçamento:
+                    Information to Help Prepare Your Quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -332,7 +332,7 @@ export default function DentalCleaningPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Dúvidas frequentes */}
+      {/* SECTION 9: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -342,7 +342,7 @@ export default function DentalCleaningPage() {
                   homeowner Inquiries
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Cleaning Dúvidas frequentes
+                  Gutter Cleaning FAQs
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -361,16 +361,16 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Preventive Health
+                Gutter Care
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Solicitar limpeza de calhas
+                Request Gutter Cleaning
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar orçamento
+              Request a Quote
             </Button>
           </AnimateOnScroll>
         </div>

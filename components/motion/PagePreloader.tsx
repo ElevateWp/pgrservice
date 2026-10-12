@@ -111,9 +111,9 @@ export default function PagePreloader() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#151515] text-paper overflow-hidden select-none"
+      className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#181818] text-paper overflow-hidden select-none"
       style={{ willChange: 'transform' }}
-      aria-label="Carregando MAILSON REPAROS & MANUTENÇÕES LTDA"
+          aria-label="Loading PGR Services"
     >
       {/* Subtle Background Radial Aura */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(35,139,104,0.10)_0%,transparent_70%)] pointer-events-none" />
@@ -125,11 +125,11 @@ export default function PagePreloader() {
         {/* Animated 3D Logo */}
         <div
           ref={logoRef}
-          className="relative w-20 h-20 sm:w-24 sm:h-24 bg-paper rounded-2xl shadow-2xl p-2.5 flex items-center justify-center mb-6 border border-[#FF2933]/40"
+          className="relative w-20 h-20 sm:w-24 sm:h-24 bg-paper rounded-2xl shadow-2xl p-2.5 flex items-center justify-center mb-6 border border-[#FF3B45]/40"
         >
           <Image
-            src="/images/logo.png"
-            alt="MAILSON REPAROS & MANUTENÇÕES LTDA"
+            src="/images/pgr-logo.png"
+            alt="PGR Services"
             width={80}
             height={80}
             priority
@@ -142,7 +142,7 @@ export default function PagePreloader() {
           ref={titleRef}
           className="font-display text-22 sm:text-30 md:text-36 font-medium text-paper uppercase tracking-[0.08em] leading-tight mb-3 text-shadow-sm"
         >
-          MAILSON REPAROS &amp; MANUTENÇÕES LTDA
+          PGR Services
         </h1>
 
         {/* Delicate Golden-Lime Divider Line */}
@@ -156,7 +156,7 @@ export default function PagePreloader() {
           ref={subtitleRef}
           className="font-body text-12 sm:text-13 text-paper/85 uppercase tracking-[0.15em]"
         >
-          MAILSON REPAROS & MANUTENÇÕES LTDA • Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas
+          PGR Services • Monday to Friday, 8 AM–6:30 PM · Weekends closed
         </p>
       </div>
     </div>

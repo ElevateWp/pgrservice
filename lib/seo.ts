@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'http://localhost:3456';
+export const BASE_URL = 'https://pgrservice.ie';
 
 export function createMetadata({
   title,
@@ -16,7 +16,7 @@ export function createMetadata({
 }): Metadata {
   const url = `${BASE_URL}${pathname}`;
   const fullTitle = `${title} | ${CLINIC_INFO.name}`;
-  const defaultImage = `${BASE_URL}/images/logo.png`;
+  const defaultImage = `${BASE_URL}/images/pgr-logo.png`;
 
   return {
     title: fullTitle,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'pt_BR',
+      locale: 'en_IE',
       type: 'website',
       images: [
         {
@@ -83,23 +83,18 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
-      .filter((item) => item.hours !== 'Fechado')
+      .filter((item) => item.hours !== 'Closed')
       .map((item) => {
-        const isAllDay = item.hours.includes('24 horas');
-        const range = item.hours.match(/(\d{1,2})h[–-](\d{1,2})/);
+        const isAllDay = item.hours.includes('24 hours');
+        const range = item.hours.match(/(\d{1,2})\s*AM[–-](\d{1,2}:\d{2})\s*PM/i);
         return ({
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: {
-          'Segunda-feira': 'Monday',
-          'Terça-feira': 'Tuesday',
-          'Quarta-feira': 'Wednesday',
-          'Quinta-feira': 'Thursday',
-          'Sexta-feira': 'Friday',
-          'Sábado': 'Saturday',
-          'Domingo': 'Sunday',
+          Monday: 'Monday', Tuesday: 'Tuesday', Wednesday: 'Wednesday', Thursday: 'Thursday',
+          Friday: 'Friday', Saturday: 'Saturday', Sunday: 'Sunday',
         }[item.day],
         opens: isAllDay ? '00:00' : `${(range?.[1] ?? '08').padStart(2, '0')}:00`,
-        closes: isAllDay ? '23:59' : `${(range?.[2] ?? '00').padStart(2, '0')}:00`,
+        closes: isAllDay ? '23:59' : '18:30',
       });
       }),
   };

@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer className="w-full bg-forest text-paper border-t border-mist/20 pt-16 md:pt-24 pb-12">
       <div className="max-w-site mx-auto px-6 md:px-12">
-        {/* Top Section: Clinic Thesis & Immediate Urgência Alert */}
+        {/* Company overview and quick contact */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
-                  src="/images/logo.png"
-                  alt="MAILSON REPAROS & MANUTENÇÕES LTDA — soluções residenciais e consertos em geral"
+                  src="/images/pgr-logo.png"
+                  alt="PGR Services — Professional Guttering & Roofing"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,32 +22,32 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  MAILSON REPAROS & MANUTENÇÕES LTDA
+                  PGR Services
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Reparos e manutenção de telhados
+                  Professional Guttering & Roofing
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.
+              Serving Dublin and surrounding areas. Open Monday to Friday, 8 AM–6:30 PM.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+55 96 99169-5118</span>
+              <span>+353 87 330 8707</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Atendimento Rápido & WhatsApp
+                Quick Quotes & WhatsApp
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Precisa agendar uma avaliação, tirar dúvidas ou solicitar atendimento de telhados?
+                Need a roof repair, new gutters or a friendly quote?
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5596991695118`}
+                  href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
@@ -58,7 +58,7 @@ export default function Footer() {
                   href="/book-appointment/"
                   className="font-body text-13 text-paper/80 underline underline-offset-4 hover:text-paper"
                 >
-                  Solicitar Orçamento Online
+                  Request a Free Quote Online
                 </Link>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Column 1: technical Treatments */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              serviços
+              Services
             </span>
             <ul className="space-y-2.5 font-body text-15">
               {SERVICES.map((s) => (
@@ -89,12 +89,12 @@ export default function Footer() {
           {/* Column 2: technical Team */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Equipe
+              Our Team
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/dentists/" className="text-paper/80 hover:text-lime transition-colors">
-                  Nossa equipe de telhados
+                  Meet the Team
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -113,32 +113,32 @@ export default function Footer() {
           {/* Column 3: The company */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              A equipe
+              Company
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/about/" className="text-paper/80 hover:text-lime transition-colors">
-                  Sobre a empresa
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Blog técnico
+                  Roofing Tips
                 </Link>
               </li>
               <li>
                 <Link href="/book-appointment/" className="text-paper/80 hover:text-lime transition-colors">
-                  Solicitar orçamento
+                  Request a Quote
                 </Link>
               </li>
               <li>
                 <Link href="/contact/" className="text-paper/80 hover:text-lime transition-colors">
-                  Localização & Contato
+                  Location & Contact
                 </Link>
               </li>
               <li>
                 <Link href="/emergency-dentist/" className="text-paper/80 hover:text-lime transition-colors">
-                  Atendimento de Urgência
+                  Emergency Repairs
                 </Link>
               </li>
             </ul>
@@ -147,13 +147,13 @@ export default function Footer() {
           {/* Column 4: Contact Info */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Contato Direto
+              Contact Us
             </span>
             <div className="space-y-3 font-body text-15 text-paper/80">
               <div>
-                <span className="text-paper/50 block text-13">Telefone & WhatsApp:</span>
+                <span className="text-paper/50 block text-13">Phone & WhatsApp:</span>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5596991695118`}
+                  href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-lime transition-colors font-medium"
@@ -162,7 +162,7 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <span className="text-paper/50 block text-13">Área de atendimento:</span>
+                <span className="text-paper/50 block text-13">Address:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
                   {CLINIC_INFO.primaryLocation.street}
                   <br />
@@ -176,11 +176,11 @@ export default function Footer() {
         {/* Bottom Section: Legal & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body text-13 text-paper/60">
           <div>
-            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. Todos os direitos reservados.
+            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas</span>
-            <span>MAILSON REPAROS & MANUTENÇÕES LTDA</span>
+            <span>Monday–Friday · 8 AM–6:30 PM · Weekends closed</span>
+            <span>PGR Services</span>
           </div>
         </div>
       </div>

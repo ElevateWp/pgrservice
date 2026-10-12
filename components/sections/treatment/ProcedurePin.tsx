@@ -26,8 +26,8 @@ interface ProcedurePinProps {
 
 export default function ProcedurePin({
   steps,
-  title = 'Etapas do serviço',
-  subtitle = 'Sequência do reparo',
+  title = 'Service steps',
+  subtitle = 'Repair process',
   className = '',
 }: ProcedurePinProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -131,7 +131,7 @@ export default function ProcedurePin({
                 </p>
                 <div className="p-3.5 sm:p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80 block">
-                    <strong className="text-forest font-medium">técnica Standard:</strong>{' '}
+                    <strong className="text-forest font-medium">Typical timing:</strong>{' '}
                     {step.clinicalDetails}
                   </span>
                 </div>

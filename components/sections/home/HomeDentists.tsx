@@ -12,17 +12,17 @@ export default function HomeDentists() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Nossa equipe
+                Meet the team
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça a equipe de reparos
+                Friendly, skilled roofing specialists
               </h2>
             </div>
             <Link
               href="/dentists/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
-              Conheça a equipe →
+              Meet the team →
             </Link>
           </div>
         </AnimateOnScroll>

@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Equipe MAILSON REPAROS & MANUTENÇÕES LTDA', path: '/dentists/' },
+              { name: 'PGR Services Team', path: '/dentists/' },
               { name: dentist.name, path: `/dentists/${dentist.slug}/` },
             ]}
           />
@@ -79,7 +79,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src={dentist.image}
-                    alt={`Logo da ${dentist.name}`}
+                    alt={`${dentist.name} profile image`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -87,8 +87,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Prática empresa:</span>
-                  <span className="font-medium text-forest">{dentist.experienceYears}+ Anos de Experiência</span>
+                  <span>Professional Experience:</span>
+                  <span className="font-medium text-forest">{dentist.experienceYears}+ Years</span>
                 </div>}
               </AnimateOnScroll>
             </div>
@@ -108,7 +108,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="p-6 bg-mist/30 border-l-2 border-forest mb-8 shadow-sm">
                   <span className="font-body text-13 text-forest font-medium uppercase tracking-wider block mb-2">
-                    Filosofia de Atendimento
+                    Service Philosophy
                   </span>
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed italic">
                     “{dentist.philosophy}”
@@ -117,10 +117,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="flex flex-wrap items-center gap-4">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Solicitar orçamento com {dentist.name}
+                    Request a Quote with {dentist.name}
                   </Button>
                   <Button href="/dentists/" variant="ghost" size="lg">
-                    Voltar à equipe
+                    Back to the Team
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -136,7 +136,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.education.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Formação & Especializações
+                  Training and Specialisations
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.education.map((edu, idx) => (
@@ -152,7 +152,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.memberships.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Associações & Registros
+                  Associations and Registrations
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.memberships.map((mem, idx) => (
@@ -175,10 +175,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             <AnimateOnScroll animation="fade-up" duration={0.8}>
               <div className="mb-12">
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Áreas de Atuação
+                  Areas of Service
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  serviços realizados por {dentist.name}
+                  Services Provided by {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -199,7 +199,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                       href={`/${service.slug}/`}
                       className="font-body text-13 text-forest font-medium hover:underline inline-flex items-center gap-1"
                     >
-                      Ver protocolo do procedimento →
+                      View Service Details →
                     </Link>
                   </div>
                 </AnimateOnScroll>
@@ -215,16 +215,16 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Orçamento Direto
+                Request a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Deseja Solicitar orçamento com {dentist.name}?
+                Would you like to request a quote from {dentist.name}?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar orçamento
+              Request a Quote
             </Button>
           </AnimateOnScroll>
         </div>

@@ -5,17 +5,17 @@
 @layer base {
   :root {
     --paper: #FFFFFF; /* Main Background */
-    --paper-secondary: #F5F5F5; /* Secondary Background */
-    --forest: #151515; /* Deep Sections */
-    --forest-ink: #171717; /* Main Text */
-    --secondary-text: #666666; /* Secondary Text */
-    --primary-brand: #E50914; /* Primary Brand / CTA */
-    --brand-hover: #FF2933; /* Hover / Highlight */
-    --red-accent: #E50914; /* Brand accent */
-    --navy-accent: #151515; /* Navy Blue Accent */
-    --soft-blue: #E6E6E6; /* Soft Green */
-    --lime: #FF2933; /* Highlights */
-    --mist: #DDDDDD; /* Borders */
+    --paper-secondary: #F5F7F5;
+    --forest: #181818;
+    --forest-ink: #202020;
+    --secondary-text: #6B6B6B;
+    --primary-brand: #E91E2B;
+    --brand-hover: #FF3B45;
+    --red-accent: #E91E2B;
+    --navy-accent: #242424;
+    --soft-blue: #FDE5E7;
+    --lime: #FF3B45;
+    --mist: #E2E5E2;
     
     --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -67,7 +67,7 @@
   textarea:focus-visible,
   summary:focus-visible,
   [tabindex]:focus-visible {
-    outline: 2px solid var(--forest);
+    outline: 2px solid var(--primary-brand);
     outline-offset: 3px;
   }
 

@@ -8,7 +8,7 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 export default function HomeLocation() {
   const todayDayName = useMemo(() => {
-    const days = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return days[new Date().getDay()];
   }, []);
 
@@ -18,10 +18,10 @@ export default function HomeLocation() {
         <AnimateOnScroll animation="fade-up" duration={0.8}>
           <div className="mb-16">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Contato & Horários
+              Contact & Opening Hours
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Fale com a equipe
+              Get in touch
             </h2>
           </div>
         </AnimateOnScroll>
@@ -35,7 +35,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  Consulte a equipe sobre a área de atendimento.
+                  Call us to confirm availability in your area.
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -46,13 +46,13 @@ export default function HomeLocation() {
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-3 font-body text-13 text-[#E50914] font-medium hover:underline"
+                  className="inline-block mt-3 font-body text-13 text-[#E91E2B] font-medium hover:underline"
                 >
-                  Ver endereço no mapa →
+                  View on Google Maps →
                 </a>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F5F5F5] border border-[#DDDDDD] px-3 py-1.5 text-12 text-[#171717]">
+                    <span key={highlight} className="bg-[#F5F7F5] border border-[#E2E5E2] px-3 py-1.5 text-12 text-[#202020]">
                       {highlight}
                     </span>
                   ))}
@@ -64,7 +64,7 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
               <div>
                 <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-3 font-semibold">
-                  Horário de Funcionamento
+                  Opening Hours
                 </span>
                 <div className="border border-mist overflow-hidden bg-paper shadow-sm">
                   <table className="w-full text-left font-body text-13">
@@ -82,7 +82,7 @@ export default function HomeLocation() {
                               <span>{item.day}</span>
                               {isToday && (
                                 <span className="ml-2 text-13 uppercase text-forest-ink/80 font-normal">
-                                  (Hoje)
+                                  (Today)
                                 </span>
                               )}
                             </td>
@@ -103,10 +103,10 @@ export default function HomeLocation() {
                   variant="ghost"
                   size="md"
                 >
-                  Consultar atendimento
+                  Message us on WhatsApp
                 </Button>
                 <Button href="/contact/" variant="forest" size="md">
-                  Página de Contato
+                  Contact page
                 </Button>
               </div>
             </AnimateOnScroll>
@@ -117,14 +117,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/logo.png"
-                  alt="MAILSON REPAROS & MANUTENÇÕES LTDA — soluções residenciais e consertos em geral"
+                  src="/images/pgr-logo.png"
+                  alt="PGR Services — Professional Guttering & Roofing"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-contain"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  MAILSON REPAROS & MANUTENÇÕES LTDA
+                  PGR Services · Dublin
                 </div>
               </div>
             </AnimateOnScroll>
@@ -133,20 +133,20 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Atendimento de telhados de Excelência
+                    Professional roofing services
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Reparos e manutenção de telhados
+                    Guttering, fascias and roofing
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Consulte a equipe sobre a área de atendimento.
+                    Based at Jamestown Little Industrial Estate in Finglas, Dublin 11.
                   </p>
                   <p className="font-body text-13 text-forest-ink/70 mb-3 leading-relaxed">
 
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-                    <span>WhatsApp / Telefone Direto: {CLINIC_INFO.contact.phone}</span>
+                    <span>Phone & WhatsApp: {CLINIC_INFO.contact.phone}</span>
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ export default function HomeLocation() {
                     variant="forest"
                     size="sm"
                   >
-                    Ver Detalhes de Contato
+                    Contact us
                   </Button>
                 </div>
               </div>

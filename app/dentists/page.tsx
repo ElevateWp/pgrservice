@@ -12,9 +12,9 @@ import { DENTISTS, SERVICES, CLINIC_INFO } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Equipe MAILSON REPAROS & MANUTENÇÕES LTDA',
+  title: 'Our Team',
   description:
-    'Conheça a equipe da MAILSON REPAROS & MANUTENÇÕES LTDA, especializada em soluções residenciais e consertos em geral.',
+    'Meet the PGR Services team, providing roofing and guttering services in Dublin.',
   pathname: '/dentists/',
 });
 
@@ -24,17 +24,17 @@ export default function DentistsPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Equipe MAILSON REPAROS & MANUTENÇÕES LTDA', path: '/dentists/' }]} />
+          <Breadcrumbs items={[{ name: 'Our Team', path: '/dentists/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  Equipe MAILSON REPAROS & MANUTENÇÕES LTDA
+                  PGR Services team
                 </span>
-                <WordRevealH1 text="Soluções para construção e reforma." />
+                <WordRevealH1 text="Friendly, skilled roofing specialists." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Nossa equipe oferece soluções residenciais e consertos em geral." />
+                  <ScrubbedParagraph text="Rafal and the team provide professional guttering, fascias, soffits and roof repairs throughout Dublin." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -42,9 +42,9 @@ export default function DentistsPage() {
             <div className="lg:col-span-4 lg:pl-6 flex flex-col justify-end">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-2 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas</span>
+                  <span className="font-medium text-forest block">Monday–Friday · 8 AM–6:30 PM</span>
                   <p className="text-forest-ink/70">
-                    Fale com a equipe para confirmar o serviço que você precisa.
+                    Contact the team to discuss the work you need.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -59,10 +59,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Nossa equipe
+                Our team
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça a equipe de reparos
+                Meet the roofing team
               </h2>
             </div>
           </AnimateOnScroll>
@@ -85,10 +85,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Atuação empresa
+                Our services
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Áreas de Atuação
+                Areas of expertise
               </h2>
             </div>
           </AnimateOnScroll>
@@ -98,14 +98,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Reparo de telhados e infiltrações
+                    Roof repairs and leaks
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Avaliação de infiltrações, telhas soltas e acabamentos para definir o reparo indicado.
+                    Assessment of leaks, slipped tiles and roof finishes to plan suitable repairs.
                   </p>
                 </div>
                 <Link href="/dental-implants/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Ver reparos →
+                  View Repairs →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -114,14 +114,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    serviços de telhados Domiciliar
+                    Guttering, fascias and soffits
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Serviços demonstrativos para telhados residenciais; confirme a disponibilidade e a área atendida.
+                    Gutter, fascia and soffit replacement for homes. Contact us to confirm service availability.
                   </p>
                 </div>
                 <Link href="/contact/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Atendimento Domiciliar →
+                  Guttering services →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -130,14 +130,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Inspeção de telhados
+                    Roof inspections
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Inspeção e reparo de telhas, rufos, calhas e pontos de vedação.
+                    Inspections and repairs for tiles, flashing, gutters and seals.
                   </p>
                 </div>
                 <Link href="/braces/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Ver Inspeção de Telhados →
+                  View roof inspections →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -146,14 +146,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Acabamentos e reparos
+                    Roof Finishing and Repairs
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Substituição de telhas e reparo de pontos de vedação e acabamento.
+                    Tile replacement and repairs to seals and roof finishing.
                   </p>
                 </div>
                 <Link href="/cosmetic-dentistry/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Ver Estética →
+                  View Repairs →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -167,10 +167,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Perfil profissional
+                Team Profiles
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Informações profissionais
+                Professional Information
               </h2>
             </div>
           </AnimateOnScroll>
@@ -206,20 +206,20 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Compromisso com o Proprietário
+                Our Commitment to Property Owners
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                Nosso Compromisso técnico
+                Our Service Commitment
               </h2>
               <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8">
-                Priorizamos o atendimento atencioso, a clareza nas orientações e a busca pelo melhor custo-benefício em cada plano de reparo, seja no equipe ou na comodidade do atendimento domiciliar.
+                We aim to provide clear advice and practical repair options. The recommended work and quotation are based on the roof condition and the needs of each property.
               </p>
               <div className="p-6 bg-mist/40 border-l-2 border-forest shadow-sm">
                 <span className="font-body text-15 text-forest-ink/80 block italic">
-                  “reparos Reparo localizado pode trazer seu proteção em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
+                  “We explain the repair options clearly and carry out agreed work with care for your home.”
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — Equipe MAILSON REPAROS & MANUTENÇÕES LTDA
+                  — PGR Services Team
                 </span>
               </div>
             </div>
@@ -233,10 +233,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                serviços Oferecidos
+                Services Offered
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Serviços de Telhado
+                Roofing Services
               </h2>
             </div>
           </AnimateOnScroll>
@@ -252,7 +252,7 @@ export default function DentistsPage() {
                     {s.navLabel}
                   </span>
                   <span className="font-body text-13 text-forest font-medium">
-                    Saiba mais →
+                    Learn More →
                   </span>
                 </Link>
               </AnimateOnScroll>
@@ -267,16 +267,16 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Orçamento
+                Get a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Solicite sua avaliação com a equipe de reparos de telhados
+                Request an assessment from the PGR Services roofing team.
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar Orçamento
+              Request a Quote
             </Button>
           </AnimateOnScroll>
         </div>

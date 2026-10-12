@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Solicitar orçamento de telhados',
+  title: 'Request a Roofing Quote',
   description:
-    'Solicite um orçamento para reparo de infiltrações, substituição de telhas, limpeza de calhas ou manutenção. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
+    'Request a free quote for roof repairs, guttering, fascia and soffit replacement or maintenance. Open Monday to Friday, 8 AM–6:30 PM.',
   pathname: '/book-appointment/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Envie sua Solicitação',
-    description: 'Selecione o reparo de interesse, data e horário preferencial através do formulário.',
+    title: 'Send your request',
+    description: 'Tell us about the work you need and your preferred date and time.',
   },
   {
     step: 2,
-    title: 'Avaliação da Equipe',
-    description: 'A equipe confirma a disponibilidade e combina os próximos passos após receber a solicitação.',
+    title: 'We review your request',
+    description: 'The team confirms availability and agrees the next steps with you.',
   },
   {
     step: 3,
-    title: 'Confirmação via WhatsApp ou Telefone',
-    description: 'Entramos em contato rapidamente para confirmar seu horário e fornecer orientações.',
+    title: 'We get back to you',
+    description: 'We will contact you by phone or WhatsApp to discuss the project.',
   },
   {
     step: 4,
-    title: 'Atendimento Atencioso',
-    description: 'Venha ao equipe ou receba o atendimento de serviços de telhados domiciliar no conforto da sua casa.',
+    title: 'Your quotation',
+    description: 'We provide a clear quotation for the agreed work at your property.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Solicitar orçamento', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/book-appointment/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Atendimento Personalizado
+                  Free, no-obligation quote
                 </span>
-                <WordRevealH1 text="Solicite uma avaliação do seu telhado." />
+                <WordRevealH1 text="Tell us about your roofing project." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Solicite uma avaliação para infiltrações, telhas danificadas, calhas, vedação ou manutenção preventiva. Consulte a equipe sobre a área de atendimento." />
+                  <ScrubbedParagraph text="Request a quotation for leaks, damaged tiles, gutters, fascias, soffits or roof maintenance. Contact the team to confirm service availability in your area." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,12 +62,12 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Orçamento via WhatsApp:</span>
+                  <span className="font-medium text-forest block">Get a quote on WhatsApp:</span>
                   <p className="text-forest-ink/70">
-                    Prefere falar diretamente conosco agora? Clique abaixo para abrir o WhatsApp.
+                    Prefer to speak with us directly? Start a WhatsApp conversation below.
                   </p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5596991695118"
+                    href="https://wa.me/353873308707"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
@@ -90,13 +90,13 @@ export default function BookAppointmentPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Como Funciona
+                    How it works
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    Como funciona a solicitação
+                    Requesting a quote
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    Priorizamos a pontualidade e o tempo necessário para cada Proprietário, garantindo uma avaliação completa e esclarecedora.
+                    Share a few details about your property and the work you need. We will get back to you to discuss the next steps.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -140,12 +140,12 @@ export default function BookAppointmentPage() {
             {/* Contact Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato Direto</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Fale com a nossa equipe</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contact</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Talk to the team</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
                     <span className="text-forest-ink/60 block">WhatsApp:</span>
-                    <a href="https://api.whatsapp.com/send?phone=5596991695118" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
+                    <a href="https://wa.me/353873308707" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.whatsapp}
                     </a>
                   </div>
@@ -162,8 +162,8 @@ export default function BookAppointmentPage() {
             {/* Opening Hours */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horário</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Horários de atendimento</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Hours</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Opening hours</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
@@ -178,10 +178,10 @@ export default function BookAppointmentPage() {
             {/* Physical Área de atendimento */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Área de atendimento</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Where to find us</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  Consulte a equipe sobre a área de atendimento.
+                  {CLINIC_INFO.primaryLocation.directions}
                 </p>
               </div>
             </AnimateOnScroll>

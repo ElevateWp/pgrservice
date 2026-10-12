@@ -16,9 +16,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Reparo e manutenção de telhados',
+  title: 'Professional Guttering & Roofing in Dublin',
   description:
-    'MAILSON REPAROS & MANUTENÇÕES LTDA: reparo e manutenção de telhados. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
+    'PGR Services provides guttering, fascia, soffit and roofing services in Dublin. Call Rafal and the team for a free quotation.',
   pathname: '/',
 });
 
@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* SECTION 3: Dental Services (Pinned Horizontal Track - Orchestrated Moment 2) */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Comprehensive técnica Scope"
+        title="Guttering & Roofing Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   if (!post) return {};
 
   return createMetadata({
-    title: `${post.title} | Dicas sobre telhados`,
+    title: `${post.title} | Roofing Advice`,
     description: post.excerpt,
     pathname: `/blog/${post.slug}/`,
     image: post.leadImage,
@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe MAILSON REPAROS & MANUTENÇÕES LTDA',
+      name: author?.name || 'PGR Services Team',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Dicas sobre telhados', path: '/blog/' },
+              { name: 'Roofing Advice', path: '/blog/' },
               { name: post.category, path: '/blog/' },
               { name: post.title, path: `/blog/${post.slug}/` },
             ]}
@@ -176,7 +176,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="p-8 bg-mist/40 border border-mist my-8 shadow-sm">
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Associated técnica repair
+                    Related Roofing Service
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
                     {relatedService.name} Protocol
@@ -188,18 +188,18 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                     href={`/${relatedService.slug}/`}
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Explore complete {relatedService.navLabel} procedure sequence →
+                    Explore the {relatedService.navLabel} service →
                   </Link>
                 </div>
               </AnimateOnScroll>
             )}
 
-            {/* Article Dúvidas frequentes */}
+            {/* Article Frequently Asked Questions */}
             {post.content.faqs && post.content.faqs.length > 0 && (
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="pt-8 border-t border-mist">
                   <h3 className="font-display text-26 text-forest-ink mb-6">
-                    técnica Questions on this Topic
+                    Questions on This Topic
                   </h3>
                   <Accordion items={post.content.faqs} />
                 </div>
@@ -213,7 +213,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
       {relatedTrackItems.length > 0 && (
         <PinnedHorizontalTrack
           items={relatedTrackItems}
-          title="Related técnica Research"
+          title="Related Roofing Articles"
         />
       )}
 
@@ -223,10 +223,10 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                técnica Care
+                Roofing Advice
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Discuss your case with our técnica team
+                Discuss your project with our roofing team
               </h2>
             </div>
           </AnimateOnScroll>

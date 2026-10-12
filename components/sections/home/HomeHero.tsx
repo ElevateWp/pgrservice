@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Reparos de telhados com cuidado, técnica e transparência.';
+  const headline = 'Reliable roofing and guttering, done right.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?auto=format&fit=crop&w=1600&q=85"
-        alt="Imagem de banco ilustrativa de atendimento de telhados"
+        src="/images/pgr-project-08.jpg"
+        alt="Roof and gutter installation by PGR Services"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#E50914]" />
-              <span className="font-body text-[11px] text-[#666666] uppercase tracking-[0.14em]">
-                Seu telhado, protegido.
+              <span aria-hidden="true" className="h-px w-8 bg-[#E91E2B]" />
+              <span className="font-body text-[11px] text-[#6B6B6B] uppercase tracking-[0.14em]">
+                PGR Services · Dublin
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#171717] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#202020] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['telhados', 'cuidado,', 'transparência.'].includes(word) ? 'text-[#E50914]' : ''}`}
+                      className={`inline-block will-change-transform ${['roofing', 'guttering,', 'right.'].includes(word) ? 'text-[#E91E2B]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,7 +162,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              A MAILSON REPAROS & MANUTENÇÕES LTDA oferece serviços de reparo e manutenção de telhados.
+              Professional guttering, fascias, soffits and roofing services in Dublin. Free quotations and friendly service from Rafal and the team.
             </p>
 
             <div
@@ -170,23 +170,23 @@ export default function HomeHero() {
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
               <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Solicitar orçamento
+                Request a Free Quote
               </Button>
               <Button
-                href={`https://api.whatsapp.com/send?phone=5596991695118`}
+                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                WhatsApp {CLINIC_INFO.contact.phone}
+                Call us: {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#171717]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#202020]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#171717]">Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas</span>
+              <span className="font-medium text-[#202020]">Mon–Fri, 8:00 AM–6:30 PM · Weekends closed</span>
               <span className="hidden sm:inline">•</span>
               <span>{CLINIC_INFO.primaryLocation.street}</span>
               <span className="hidden sm:inline">•</span>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F5F5F5] border border-[#DDDDDD] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#171717] uppercase tracking-wider font-semibold">
-                Soluções em Telhados
+            <div className="p-6 sm:p-8 bg-[#F5F7F5] border border-[#E2E5E2] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#202020] uppercase tracking-wider font-semibold">
+                Guttering & Roofing
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#171717]/90 leading-relaxed">
-                <strong className="text-[#171717] font-semibold">&ldquo;MAILSON REPAROS & MANUTENÇÕES LTDA&rdquo;</strong> &mdash; reparos e manutenção de telhados.
+              <p className="font-body text-13 sm:text-15 text-[#202020]/90 leading-relaxed">
+                <strong className="text-[#202020] font-semibold">PGR Services</strong> &mdash; professional guttering and roofing across Dublin.
               </p>
-              <div className="pt-3 border-t border-[#DDDDDD] flex items-center justify-between text-13 font-body text-[#171717]/70">
-                <span>Atendimento todos os dias</span>
-                <span className="text-[#171717] font-semibold">Segunda a sexta · 8h à meia-noite; fim de semana 24h</span>
+              <div className="pt-3 border-t border-[#E2E5E2] flex items-center justify-between text-13 font-body text-[#202020]/70">
+                <span>Opening hours</span>
+                <span className="text-[#202020] font-semibold">Monday–Friday · 8 AM–6:30 PM</span>
               </div>
             </div>
           </div>

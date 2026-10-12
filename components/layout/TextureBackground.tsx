@@ -10,7 +10,7 @@ if (typeof window !== 'undefined') {
 }
 
 interface TextureBackgroundProps {
-  variant?: 'hero' | 'divider' | 'Contato' | 'blog';
+  variant?: 'hero' | 'divider' | 'contact' | 'blog';
   className?: string;
   opacity?: number;
 }
@@ -45,7 +45,7 @@ export default function TextureBackground({
 
   // Default opacities based on permitted variants
   const defaultOpacity =
-    variant === 'hero' ? 0.16 : variant === 'divider' ? 0.22 : variant === 'Contato' ? 0.14 : 0.12;
+    variant === 'hero' ? 0.16 : variant === 'divider' ? 0.22 : variant === 'contact' ? 0.14 : 0.12;
   const activeOpacity = opacity ?? defaultOpacity;
 
   return (
@@ -93,13 +93,13 @@ export default function TextureBackground({
           <linearGradient id={`hero-mask-grad-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
             <stop offset="35%" stopColor="#FFFFFF" stopOpacity="0.2" />
-            <stop offset="70%" stopColor="#151515" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#151515" stopOpacity="0.95" />
+            <stop offset="70%" stopColor="#181818" stopOpacity="0.7" />
+            <stop offset="100%" stopColor="#181818" stopOpacity="0.95" />
           </linearGradient>
 
           <radialGradient id={`divider-radial-${variant}`} cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#151515" stopOpacity="0.8" />
-            <stop offset="60%" stopColor="#151515" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#181818" stopOpacity="0.8" />
+            <stop offset="60%" stopColor="#181818" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
           </radialGradient>
         </defs>
